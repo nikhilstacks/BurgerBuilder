@@ -1,12 +1,14 @@
-import styles from "./test.module.css";
+import React, { Component } from "react";
+import Layout from "./Components/Layout/Layout";
 
-function App() {
-  return (
-    <div className="App">
-      <h1 className={styles.test}>test</h1>
-      <h2 className="test">this is a test text</h2>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Layout>test</Layout>
+      </div>
+    );
+  }
 }
 
 export default App;
