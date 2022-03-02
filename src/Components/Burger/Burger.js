@@ -5,6 +5,7 @@ import BurgerCss from "./Burger.module.css";
 const Burger = (props) => {
   const transformedIngredients = Object.keys(props.ingredients).map((ikeys) => {
     return [...Array(props.ingredients[ikeys])].map((_, i) => {
+      console.log(ikeys, i);
       return <BurgerIngredients key={ikeys + i} type={ikeys} />;
     });
   });
