@@ -5,12 +5,16 @@ import SideDrawerCss from "./SideDrawer.module.css";
 import Backdrop from "../../Ui/Backdrop/Backdrop";
 import Aux from "../../../hoc/Auxiliary";
 
-const sideDrawer = () => {
-  // ...
+const sideDrawer = (props) => {
+  let attachedClasses = [SideDrawerCss.SideDrawer, SideDrawerCss.Close];
+  if (props.open) {
+    attachedClasses = [SideDrawerCss.SideDrawer, SideDrawerCss.Open];
+  }
+
   return (
     <Aux>
-      <Backdrop show />
-      <div className={SideDrawerCss.SideDrawer}>
+      <Backdrop show={props.open} hidden={props.closed} />
+      <div className={attachedClasses.join(" ")}>
         <div className={SideDrawerCss.Logo}>
           <Logo />
         </div>
