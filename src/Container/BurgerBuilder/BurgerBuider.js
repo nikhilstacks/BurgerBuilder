@@ -19,6 +19,7 @@ class BurgerBuilder extends Component {
   // }
 
   state = {
+    // this is a new way of declaring a state in react other is defined above
     ingredients: {
       salad: 0,
       bacon: 0,
