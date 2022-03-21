@@ -104,7 +104,7 @@ class BurgerBuilder extends Component {
       delivery: "fastest",
     };
     axios
-      .post("/orders.json", order)
+      .post("/orders.json", order) // we always have to use .json in firebase
       .then((response) => {
         this.setState({ loading: false, purchasing: false });
       })
