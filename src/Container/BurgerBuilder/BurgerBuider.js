@@ -163,7 +163,7 @@ class BurgerBuilder extends Component {
     if (this.state.loading) {
       ordersummary = <Spinner />;
     }
-
+    // adding routing in application
     return (
       <Aux>
         <Modal show={this.state.purchasing} hide={this.backdropHandler}>
