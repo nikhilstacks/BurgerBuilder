@@ -32,7 +32,6 @@ class BurgerBuilder extends Component {
   };
 
   componentDidMount() {
-    console.log(this.props);
     axios
       .get(
         "https://react-burger-builder-42855-default-rtdb.asia-southeast1.firebasedatabase.app/ingredients.json"
