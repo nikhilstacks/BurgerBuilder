@@ -1,9 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import CheckoutOrderSummary from "../../Components/Order/CheckoutOrderSummary/CheckoutOrderSummary";
-import { useNavigate } from "react-router-dom";
+import { Routes, useNavigate } from "react-router-dom";
+import { Route } from "react-router-dom";
+import ContactData from "./ContanctData/ContactData";
+
 function Checkout() {
-  let [state, setState] = useState({
+  let [state] = useState({
     ingredients: {
       salad: 1,
       bacon: 1,
@@ -19,7 +22,7 @@ function Checkout() {
   };
 
   const checkoutSuccessedHandler = () => {
-    navigate("/contact-data");
+    navigate("/checkouts");
   };
 
   return (
@@ -29,6 +32,9 @@ function Checkout() {
         checkoutCancelled={checkoutCancelledHandler}
         checkoutSuccessed={checkoutSuccessedHandler}
       />
+      <Routes>
+        <Route path="/checkouts" element={<ContactData />} />
+      </Routes>
     </div>
   );
 }
