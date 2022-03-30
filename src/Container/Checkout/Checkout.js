@@ -1,9 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import CheckoutOrderSummary from "../../Components/Order/CheckoutOrderSummary/CheckoutOrderSummary";
-import { Routes, useNavigate } from "react-router-dom";
-import { Route } from "react-router-dom";
-import ContactData from "./ContanctData/ContactData";
+import { useNavigate } from "react-router-dom";
 
 function Checkout() {
   let [state] = useState({
@@ -22,7 +20,7 @@ function Checkout() {
   };
 
   const checkoutSuccessedHandler = () => {
-    navigate("/checkouts");
+    navigate("/checkout/contact-data");
   };
 
   return (
@@ -32,9 +30,6 @@ function Checkout() {
         checkoutCancelled={checkoutCancelledHandler}
         checkoutSuccessed={checkoutSuccessedHandler}
       />
-      <Routes>
-        <Route path="/checkouts" element={<ContactData />} />
-      </Routes>
     </div>
   );
 }

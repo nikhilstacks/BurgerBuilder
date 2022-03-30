@@ -14,6 +14,7 @@ export class ContactData extends Component {
   render() {
     return (
       <div className={Contact.ContactData}>
+        <h1>Thankyou for choosing us confirm your details!!!</h1>
         <form>
           <input type="text" name="name" placeholder="Your Name" />
           <input type="email" name="email" placeholder="Your Email" />

@@ -3,6 +3,7 @@ import Layout from "./hoc/Layout/Layout";
 import BurgerBuilder from "./Container/BurgerBuilder/BurgerBuider";
 import { Routes, Route } from "react-router-dom";
 import Checkout from "./Container/Checkout/Checkout";
+import ContactData from "./Container/Checkout/ContanctData/ContactData";
 class App extends Component {
   render() {
     return (
@@ -10,6 +11,10 @@ class App extends Component {
         <Layout>
           <Routes>
             <Route path="/checkout" element={<Checkout />} />
+            <Route
+              path="/checkout/contact-data"
+              element={[<Checkout />, <ContactData />]}
+            />
             <Route path="/" exact element={<BurgerBuilder />} />
           </Routes>
         </Layout>
