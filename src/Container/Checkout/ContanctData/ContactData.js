@@ -16,10 +16,30 @@ export class ContactData extends Component {
       <div className={Contact.ContactData}>
         <h1>Thankyou for choosing us confirm your details!!!</h1>
         <form>
-          <input type="text" name="name" placeholder="Your Name" />
-          <input type="email" name="email" placeholder="Your Email" />
-          <input type="text" name="street" placeholder="Your Street" />
-          <input type="text" name="postal" placeholder="Your Postal Code" />
+          <input
+            className={Contact.Input}
+            type="text"
+            name="name"
+            placeholder="Your Name"
+          />
+          <input
+            className={Contact.Input}
+            type="email"
+            name="email"
+            placeholder="Your Email"
+          />
+          <input
+            className={Contact.Input}
+            type="text"
+            name="street"
+            placeholder="Your Street"
+          />
+          <input
+            className={Contact.Input}
+            type="text"
+            name="postal"
+            placeholder="Your Postal Code"
+          />
         </form>
         <Button btnType="Success">Order</Button>
       </div>
