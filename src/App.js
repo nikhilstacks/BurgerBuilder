@@ -13,7 +13,10 @@ class App extends Component {
             <Route path="/checkout" element={<Checkout />} />
             <Route
               path="/checkout/contact-data"
-              element={[<Checkout />, <ContactData />]}
+              element={[
+                <Checkout key="checkout" />,
+                <ContactData key="contactData" />,
+              ]}
             />
             <Route path="/" exact element={<BurgerBuilder />} />
           </Routes>
